@@ -4,156 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание №2 (Юрьев Вячеслав, ПИ-21-1)</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 
-    <h1>Задание №2</h1>
+    <!-- ШАПКА САЙТА -->
+    <header id="site-header">
+        <div class="header-container">
+            <div id="logo-container">
+                <img id="logo" src="image.jpg" alt="Логотип" width="50" height="50" />
+                <span id="site-title">Юрьев Вячеслав</span>
+            </div>
+            <nav id="top-nav">
+                <a href="#list-section">Ссылки</a> | 
+                <a href="#table-section">Таблица</a> | 
+                <a href="#form-section">Анкета</a>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Маркированный список гиперссылок</h2>
-    <ul>
-        <!-- 1. Абсолютная гиперссылка на главную страницу kubsu.ru в http -->
-        <li><a href="http://kubsu.ru/">Главная страница КубГУ (http)</a></li>
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="main-content">
 
-        <!-- 2. Абсолютная гиперссылка на главную страницу kubsu.ru в https -->
-        <li><a href="https://www.kubsu.ru/">Главная страница КубГУ (https)</a></li>
+        <h1>Задание №2</h1>
 
-        <!-- 3. Ссылка-изображение -->
-        <li><a href="https://www.kubsu.ru/"><img src="image.jpg" alt="Цветок" width="100" /></a></li>
+        <h2 id="list-section">Маркированный список гиперссылок</h2>
+        <ul>
+            <!-- 1. Абсолютная гиперссылка на главную страницу kubsu.ru в http -->
+            <li><a href="http://kubsu.ru/">Главная страница КубГУ (http)</a></li>
 
-        <!-- 4. Сокращенная ссылка на внутреннюю страницу -->
-        <li><a href="/web1/about.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+            <!-- 2. Абсолютная гиперссылка на главную страницу kubsu.ru в https -->
+            <li><a href="https://www.kubsu.ru/">Главная страница КубГУ (https)</a></li>
 
-        <!-- 5. Сокращенная ссылка на главную страницу -->
-        <li><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+            <!-- 3. Ссылка-изображение -->
+            <li><a href="https://www.kubsu.ru/"><img src="image.jpg" alt="Цветок" width="100" /></a></li>
 
-        <!-- 6. Ссылка на фрагмент текущей страницы -->
-        <li><a href="#form-section">Ссылка на фрагмент текущей страницы (к форме)</a></li>
+            <!-- 4. Сокращенная ссылка на внутреннюю страницу -->
+            <li><a href="/web1/about.html">Сокращенная ссылка на внутреннюю страницу</a></li>
 
-        <!-- 7. Ссылка с тремя параметрами в URL -->
-        <li><a href="http://example.com/?param1=val1&amp;param2=val2&amp;param3=val3">Ссылка с тремя параметрами в URL</a></li>
+            <!-- 5. Сокращенная ссылка на главную страницу -->
+            <li><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
 
-        <!-- 8. Ссылка с параметром id в URL -->
-        <li><a href="http://example.com/?id=123">Ссылка с параметром id в URL</a></li>
+            <!-- 6. Ссылка на фрагмент текущей страницы -->
+            <li><a href="#form-section">Ссылка на фрагмент текущей страницы (к форме)</a></li>
 
-        <!-- 9. Относительная на страницу в текущем каталоге -->
-        <li><a href="./page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+            <!-- 7. Ссылка с тремя параметрами в URL -->
+            <li><a href="http://example.com/?param1=val1&amp;param2=val2&amp;param3=val3">Ссылка с тремя параметрами в URL</a></li>
 
-        <!-- 10. Относительную на страницу в каталоге about -->
-        <li><a href="./about/index.html">Относительная ссылка на страницу в каталоге about</a></li>
+            <!-- 8. Ссылка с параметром id в URL -->
+            <li><a href="http://example.com/?id=123">Ссылка с параметром id в URL</a></li>
 
-        <!-- 11. Относительную на страницу в каталоге уровнем выше текущего (из каталога about) -->
-        
-        <li><a href="about/index.html">Относительная ссылка на страницу уровня выше</a></li> 
+            <!-- 9. Относительная на страницу в текущем каталоге -->
+            <li><a href="./page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
 
-        <!-- 12. Относительную на страницу в каталоге двумя уровнями выше (выдает 404, тк выше корня нет ничего)-->
-        <li><a href="../../two_levels_up.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
+            <!-- 10. Относительную на страницу в каталоге about -->
+            <li><a href="./about/index.html">Относительная ссылка на страницу в каталоге about</a></li>
 
-        <!-- 13. Контекстная в тексте абзаца -->
-        <li>Это <a href="https://www.kubsu.ru/">контекстная гиперссылка</a> (на сайт университета) в тексте абзаца</li>
+            <!-- 11. Относительную на страницу в каталоге уровнем выше текущего (из каталога about) -->
+            <li><a href="about/index.html">Относительная ссылка на страницу уровня выше</a></li> 
 
-        <!-- 14. Ссылка на фрагмент страницы стороннего сайта -->
-        <li><a href="https://www.ozon.ru/">Ссылка на фрагмент страницы стороннего сайта (Ozon)</a></li>
+            <!-- 12. Относительную на страницу в каталоге двумя уровнями выше -->
+            <li><a href="../../two_levels_up.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
 
-        <!-- 15. Ссылки из прямоугольных и круглых областей картинки (HTML-тег map) -->
-        <li>
-            <img src="image.jpg" alt="Карта-изображение" usemap="#workmap" width="150" />
-            <map name="workmap">
-                <area shape="rect" coords="0,0,50,50" href="https://kubsu.ru" alt="Квадратная область" />
-                <area shape="circle" coords="100,100,30" href="https://ya.ru" alt="Круглая область" />
-            </map>
-        </li>
+            <!-- 13. Контекстная в тексте абзаца -->
+            <li>Это <a href="https://www.kubsu.ru/">контекстная гиперссылка</a> (на сайт университета) в тексте абзаца</li>
 
-        <!-- 16. Ссылка с пустым href -->
-        <li><a href="">Ссылка с пустым href</a></li>
+            <!-- 14. Ссылка на фрагмент страницы стороннего сайта -->
+            <li><a href="https://www.ozon.ru/">Ссылка на фрагмент страницы стороннего сайта (Ozon)</a></li>
 
-        <!-- 17. Ссылка без href -->
-        <li><a>Ссылка без href</a></li>
+            <!-- 15. Ссылки из прямоугольных и круглых областей картинки (HTML-тег map) -->
+            <li>
+                <img src="image.jpg" alt="Карта-изображение" usemap="#workmap" width="150" />
+                <map name="workmap">
+                    <area shape="rect" coords="0,0,50,50" href="https://kubsu.ru" alt="Квадратная область" />
+                    <area shape="circle" coords="100,100,30" href="https://ya.ru" alt="Круглая область" />
+                </map>
+            </li>
 
-        <!-- 18. Ссылка, по которой запрещен переход поисковикам -->
-        <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+            <!-- 16. Ссылка с пустым href -->
+            <li><a href="">Ссылка с пустым href</a></li>
 
-        <!-- 19. Запрещенная для индексации поисковиками -->
-        <li><noindex><a href="https://example.com">Ссылка, запрещенная для индексации поисковиками</a></noindex></li>
+            <!-- 17. Ссылка без href -->
+            <li><a>Ссылка без href</a></li>
 
-        <!-- 20. Нумерованный список ссылок с подписями title -->
-        <li>
-            Нумерованный список ссылок с подписями title:
-            <ol>
-                <li><a href="https://kubsu.ru" title="Перейти на сайт КубГУ">КубГУ</a></li>
-                <li><a href="https://ya.ru" title="Перейти на поисковик Яндекса">Яндекс</a></li>
-            </ol>
-        </li>
+            <!-- 18. Ссылка, по которой запрещен переход поисковикам -->
+            <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
 
-        <!-- 21. Ссылка на файл на сервере FTP с авторизацией -->
-        <li><a href="ftp://username:password@ftp.example.com/file.zip">Ссылка на файл на FTP с авторизацией</a></li>
-    </ul>
+            <!-- 19. Запрещенная для индексации поисковиками -->
+            <li><noindex><a href="https://example.com">Ссылка, запрещенная для индексации поисковиками</a></noindex></li>
 
-    <hr />
+            <!-- 20. Нумерованный список ссылок с подписями title -->
+            <li>
+                Нумерованный список ссылок с подписями title:
+                <ol>
+                    <li><a href="https://kubsu.ru" title="Перейти на сайт КубГУ">КубГУ</a></li>
+                    <li><a href="https://ya.ru" title="Перейти на поисковик Яндекса">Яндекс</a></li>
+                </ol>
+            </li>
 
-    <!-- Форма -->
-    <h2 id="form-section">Анкета пользователя</h2>
-    <form action="/" method="POST">
-        <!-- 1. ФИО -->
-        <label>
-            ФИО:<br />
-            <input type="text" name="fio" placeholder="Иванов Иван Иванович" />
-        </label><br /><br />
+            <!-- 21. Ссылка на файл на сервере FTP с авторизацией -->
+            <li><a href="ftp://username:password@ftp.example.com/file.zip">Ссылка на файл на FTP с авторизацией</a></li>
+        </ul>
 
-        <!-- 2. Телефон -->
-        <label>
-            Телефон:<br />
-            <input type="tel" name="phone" placeholder="+7 (800) 000-00-00" />
-        </label><br /><br />
+        <hr />
 
-        <!-- 3. e-mail -->
-        <label>
-            E-mail:<br />
-            <input type="email" name="email" placeholder="example@mail.ru" />
-        </label><br /><br />
+        <!-- ТАБЛИЦА (добавлена для Задания 2) -->
+        <h2 id="table-section">Таблица данных</h2>
+        <table border="1" class="styled-table">
+            <thead>
+                <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Объединенная ячейка (1 и 2)</td>
+                    <td>Данные 1-3</td>
+                    <td>Данные 1-4</td>
+                </tr>
+                <tr>
+                    <td>Строка 2, Кол 1</td>
+                    <td>Строка 2, Кол 2</td>
+                    <td>Строка 2, Кол 3</td>
+                    <td>Строка 2, Кол 4</td>
+                </tr>
+                <tr>
+                    <td>Строка 3, Кол 1</td>
+                    <td colspan="3">Объединенная ячейка (со 2 по 4)</td>
+                </tr>
+                <tr>
+                    <td>Строка 4, Кол 1</td>
+                    <td>Строка 4, Кол 2</td>
+                    <td>Строка 4, Кол 3</td>
+                    <td>Строка 4, Кол 4</td>
+                </tr>
+                <tr>
+                    <td>Строка 5, Кол 1</td>
+                    <td>Строка 5, Кол 2</td>
+                    <td>Строка 5, Кол 3</td>
+                    <td>Строка 5, Кол 4</td>
+                </tr>
+                <tr>
+                    <td>Строка 6, Кол 1</td>
+                    <td>Строка 6, Кол 2</td>
+                    <td>Строка 6, Кол 3</td>
+                    <td>Строка 6, Кол 4</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- 4. Дата рождения -->
-        <label>
-            Дата рождения:<br />
-            <input type="date" name="birthdate" min="1900-01-01" max="2026-10-10" />
-        </label><br /><br />
+        <hr />
 
-        <!-- 5) Пол -->
-        Пол:<br />
-        <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
-        <label><input type="radio" name="gender" value="female" /> Женский</label><br /><br />
+        <!-- Форма -->
+        <h2 id="form-section">Анкета пользователя</h2>
+        <form action="/" method="POST">
+            <!-- 1. ФИО -->
+            <label>
+                ФИО:<br />
+                <input type="text" name="fio" placeholder="Иванов Иван Иванович" />
+            </label><br /><br />
 
-        <!-- 6) Любимый язык программирования ( выбор из списка) -->
-        <label>
-            Любимый язык программирования (множественный выбор):<br />
-            <select name="languages[]" multiple="multiple">
-                <option value="Pascal">Pascal</option>
-                <option value="C">C</option>
-                <option value="C++">C++</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="PHP">PHP</option>
-                <option value="Python">Python</option>
-                <option value="Java">Java</option>
-                <option value="Haskel">Haskel</option>
-                <option value="Clojure">Clojure</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
-            </select>
-        </label><br /><br />
+            <!-- 2. Телефон -->
+            <label>
+                Телефон:<br />
+                <input type="tel" name="phone" placeholder="+7 (800) 000-00-00" />
+            </label><br /><br />
 
-        <!-- 7) Биография -->
-        <label>
-            Биография:<br />
-            <textarea name="biography" placeholder="Расскажите немного о себе..."></textarea>
-        </label><br /><br />
+            <!-- 3. e-mail -->
+            <label>
+                E-mail:<br />
+                <input type="email" name="email" placeholder="example@mail.ru" />
+            </label><br /><br />
 
-        <!-- 8) С контрактом ознакомлен(а) -->
-        <label>
-            <input type="checkbox" name="contract_agreed" /> С контрактом ознакомлен(а)
-        </label><br /><br />
+            <!-- 4. Дата рождения -->
+            <label>
+                Дата рождения:<br />
+                <input type="date" name="birthdate" min="1900-01-01" max="2026-10-10" />
+            </label><br /><br />
 
-        <!-- 9) «Сохранить» -->
-        <input type="submit" value="Сохранить" />
-    </form>
+            <!-- 5) Пол -->
+            Пол:<br />
+            <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
+            <label><input type="radio" name="gender" value="female" /> Женский</label><br /><br />
+
+            <!-- 6) Любимый язык программирования ( выбор из списка) -->
+            <label>
+                Любимый язык программирования (множественный выбор):<br />
+                <select name="languages[]" multiple="multiple">
+                    <option value="Pascal">Pascal</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Haskel">Haskel</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="Prolog">Prolog</option>
+                    <option value="Scala">Scala</option>
+                </select>
+            </label><br /><br />
+
+            <!-- 7) Биография -->
+            <label>
+                Биография:<br />
+                <textarea name="biography" placeholder="Расскажите немного о себе..."></textarea>
+            </label><br /><br />
+
+            <!-- 8) С контрактом ознакомлен(а) -->
+            <label>
+                <input type="checkbox" name="contract_agreed" /> С контрактом ознакомлен(а)
+            </label><br /><br />
+
+            <!-- 9) «Сохранить» -->
+            <input type="submit" value="Сохранить" />
+        </form>
+
+    </main>
+
+    <!-- ПОДВАЛ САЙТА -->
+    <footer id="site-footer">
+        <p>&copy; 2026 Юрьев Вячеслав</p>
+    </footer>
 
 </body>
 </html>
