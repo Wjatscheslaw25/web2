@@ -108,7 +108,7 @@
 
         <hr />
 
-<!-- ТАБЛИЦА -->
+        <!-- ТАБЛИЦА -->
         <h2 id="table-section">Таблица данных</h2>
         <table class="styled-table">
             <thead>
@@ -158,42 +158,67 @@
 
         <hr />
 
-        <!-- Форма -->
+        <!-- ФОРМА С ИСПРАВЛЕННОЙ ВАЛИДАЦИЕЙ -->
         <h2 id="form-section">Анкета пользователя</h2>
         <form action="/" method="POST">
-            <!-- 1. ФИО -->
+            <!-- 1. ФИО (строго 3 слова, только буквы) -->
             <label>
                 ФИО:<br />
-                <input type="text" name="fio" placeholder="Иванов Иван Иванович" />
+                <input 
+                    type="text" 
+                    name="fio" 
+                    placeholder="Иванов Иван Иванович" 
+                    required 
+                    pattern="^[A-Za-zА-Яа-яЁё]+\s+[A-Za-zА-Яа-яЁё]+\s+[A-Za-zА-Яа-яЁё]+$" 
+                    title="Введите ровно 3 слова (Фамилия Имя Отчество) только из букв!" 
+                />
             </label><br /><br />
 
-            <!-- 2. Телефон -->
+            <!-- 2. Телефон (строго цифры и символы номера) -->
             <label>
                 Телефон:<br />
-                <input type="tel" name="phone" placeholder="+7 (800) 000-00-00" />
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    placeholder="+7 (800) 000-00-00" 
+                    required 
+                    pattern="[\+]?[0-9\s\-\(\)]+" 
+                    title="Введите номер телефона (только цифры и знак +)" 
+                />
             </label><br /><br />
 
-            <!-- 3. e-mail -->
+            <!-- 3. e-mail (обязательно наличие @) -->
             <label>
                 E-mail:<br />
-                <input type="email" name="email" placeholder="example@mail.ru" />
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="example@mail.ru" 
+                    required 
+                />
             </label><br /><br />
 
             <!-- 4. Дата рождения -->
             <label>
                 Дата рождения:<br />
-                <input type="date" name="birthdate" min="1900-01-01" max="2026-10-10" />
+                <input 
+                    type="date" 
+                    name="birthdate" 
+                    min="1900-01-01" 
+                    max="2026-10-10" 
+                    required 
+                />
             </label><br /><br />
 
             <!-- 5) Пол -->
             Пол:<br />
-            <label><input type="radio" name="gender" value="male" checked="checked" /> Мужской</label>
-            <label><input type="radio" name="gender" value="female" /> Женский</label><br /><br />
+            <label><input type="radio" name="gender" value="male" checked="checked" required /> Мужской</label>
+            <label><input type="radio" name="gender" value="female" required /> Женский</label><br /><br />
 
-            <!-- 6) Любимый язык программирования ( выбор из списка) -->
+            <!-- 6) Любимый язык программирования -->
             <label>
                 Любимый язык программирования (множественный выбор):<br />
-                <select name="languages[]" multiple="multiple">
+                <select name="languages[]" multiple="multiple" required>
                     <option value="Pascal">Pascal</option>
                     <option value="C">C</option>
                     <option value="C++">C++</option>
@@ -211,12 +236,12 @@
             <!-- 7) Биография -->
             <label>
                 Биография:<br />
-                <textarea name="biography" placeholder="Расскажите немного о себе..."></textarea>
+                <textarea name="biography" placeholder="Расскажите немного о себе..." required></textarea>
             </label><br /><br />
 
             <!-- 8) С контрактом ознакомлен(а) -->
             <label>
-                <input type="checkbox" name="contract_agreed" /> С контрактом ознакомлен(а)
+                <input type="checkbox" name="contract_agreed" required /> С контрактом ознакомлен(а)
             </label><br /><br />
 
             <!-- 9) «Сохранить» -->
